@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    padding: 30px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.cart-info {
+    flex: 1;
+}
+
+.qty {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty button {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #333;
+    background: white;
+    cursor: pointer;
+}
+
+.summary p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- <div class="header">
+    <h2>Ecommerce</h2>
+       <button ><i class="fa-solid fa-right-to-bracket"></i><a href="./login.html"></a>Login</button>
+    <button ><i class="fa-solid fa-user-plus"></i><a href="./register.html"></a>Register</button>
+     <button class="a"><i class="fa-solid fa-cart-shopping"></i><a href="./cart.html"></a>cart</button> -->
+    <!-- <button><i class="fa-solid fa-cart-shopping"></i><a style="color: black;"  href="./cart.html"  id="cart-count"></a></button>
+
+</div> --> 
+<div class="header">
+    <h2>Ecommerce</h2>
+
+    <div>
+        <button onclick="goLogin()">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+
+        <button onclick="goRegister()">
+            <i class="fa-solid fa-user-plus"></i> Register
+        </button>
+
+        <button onclick="goCart()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart (<span id="cart-count">0</span>)
+        </button>
+    </div>
+</div>
+
+<h2 style="text-align:center;margin-top:20px;">Cart</h2>
+
+<div class="cart-container">
+    
+    <!-- ITEM LIST -->
+    <div class="box">
+        <h3>Item List</h3>
+        <div id="cart-items"></div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="box summary">
+        <h3>Order Summary</h3>
+        <p><span>Products</span><span id="items-price">$0</span></p>
+        <p><span>Shipping</span><span>$30</span></p>
+        <hr>
+        <p><strong>Total</strong><strong id="total-price">$0</strong></p>
+        <button class="checkout">Go to checkout</button>
+    </div>
+
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

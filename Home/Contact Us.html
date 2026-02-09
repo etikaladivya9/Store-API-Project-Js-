@@ -1,139 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Contact Us</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.nav-btns button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-/* Contact */
-.contact {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-form {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin: 15px 0 5px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-textarea {
-    height: 120px;
-}
-
-form button {
-    display: block;
-    margin: 20px auto;
-    padding: 8px 25px;
-    border: none;
-    background: #777;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 15px;
-}
-</style>
+<link rel="stylesheet" href="./css.css">
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-    <h3>Ecommerce</h3>
+    <!-- NAVBAR -->
+    <header class="header">
+        <h3>Ecommerce</h3>
 
-    <nav>
-        <a href="Home.html">Home</a>
-        <a href="products.html">Products</a>
-        <a href="About.html">About</a>
-        <a href="Contact Us.html">Contact</a>
-    </nav>
+        <div class="nav1">
+            <nav>
 
-    <div class="nav-btns">
-        <button onclick="goLogin()">
-            <i class="fa-solid fa-right-to-bracket"></i> Login
-        </button>
+                <a href="./Home.html">Home</a>
+                <a href="./products.html">Products</a>
+                <a href="./About.html">About</a>
+                <a href="./Contact Us.html">Contact</a>
 
-        <button onclick="goRegister()">
-            <i class="fa-solid fa-user-plus"></i> Register
-        </button>
 
-        <button onclick="goCart()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Cart (<span id="cart-count">0</span>)
-        </button>
-    </div>
-</header>
+            </nav>
+        </div>
 
-<!-- CONTACT -->
-<section class="contact">
-    <h2>Contact Us</h2>
-    <hr>
+        <div class="buts">
+            <button class="a" onclick="goLogin()">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </button>
 
-    <form id="contactForm">
-        <label>Name</label>
-        <input type="text" id="name">
+            <button class="a" onclick="goRegister()">
+                <i class="fa-solid fa-user-plus"></i> Register
+            </button>
 
-        <label>Email</label>
-        <input type="email" id="email">
+            <button class="a" onclick="goCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
 
-        <label>Message</label>
-        <textarea id="message"></textarea>
+    <!-- CONTACT -->
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <hr>
 
-        <button type="submit">Send</button>
-    </form>
-</section>
+        <form id="contactForm">
+            <label>Name</label>
+            <input type="text" id="name">
 
-<footer>
-    Made with ❤️ by <u>Divya</u>
-</footer>
+            <label>Email</label>
+            <input type="email" id="email">
 
-<script src="./Contact Us .js"></script>
+            <label>Message</label>
+            <textarea id="message"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        Made with ❤️ by <u>Divya</u>
+    </footer>
+
+    <script src="./javascript.js"></script>
 </body>
+
 </html>

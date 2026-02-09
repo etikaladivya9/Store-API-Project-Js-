@@ -1,166 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Login</title>
+    <meta charset="UTF-8">
+    <title>Login</title>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.nav-btns button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.nav-btns .active {
-    background: #444;
-    color: white;
-}
-
-/* Login Section */
-.login {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.login h1 {
-    font-size: 36px;
-}
-
-.login hr {
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Form */
-form {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin: 15px 0 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.register-text {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.register-text a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-form button {
-    display: block;
-    margin: 20px auto;
-    padding: 8px 25px;
-    border: none;
-    background: #777;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 15px;
-}
-</style>
+    <link rel="stylesheet" href="./css.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
-<header class="navbar">
-    <h3>Ecommerce</h3>
+    <!-- Navbar -->
+    <header class="header">
+        <h3>Ecommerce</h3>
 
-    <nav>
-        <a href="./Home.html">Home</a>
-        <a href="./products.html">Products</a>
-        <a href="./About.html">About</a>
-        <a href="./Contact Us.html">Contact</a>
-    </nav>
+        <div class="nav1">
+            <nav>
 
-    <div class="nav-btns">
-        <button class="active" onclick="goLogin()">
-            <i class="fa-solid fa-right-to-bracket"></i> Login
-        </button>
+                <a href="./Home.html">Home</a>
+                <a href="./products.html">Products</a>
+                <a href="./About.html">About</a>
+                <a href="./Contact Us.html">Contact</a>
 
-        <button onclick="goRegister()">
-            <i class="fa-solid fa-user-plus"></i> Register
-        </button>
 
-        <!-- <button onclick="goCart()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Cart (<span id="cart-count">0</span>)
-        </button> -->
-        <button onclick="goCart()">
-    <i class="fa-solid fa-cart-shopping"></i>
-    Cart (<span id="cart-count">0</span>)
-</button>
-    </div>
-</header>
+            </nav>
+        </div>
 
-<!-- Login Section -->
-<section class="login">
-    <h1>Login</h1>
-    <hr>
 
-    <form id="loginForm">
-        <label>Email address</label>
-        <input type="email" id="email" placeholder="name@example.com">
+        <div class="buts">
+            <button class="a" onclick="goLogin()">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </button>
 
-        <label>Password</label>
-        <input type="password" id="password" placeholder="Password">
+            <button class="a" onclick="goRegister()">
+                <i class="fa-solid fa-user-plus"></i> Register
+            </button>
 
-        <p class="register-text">
-            New Here? <a href="./register.html">Register</a>
-        </p>
+            <button class="a" onclick="goCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
 
-        <button type="submit">Login</button>
-    </form>
-</section>
+    <!-- Login Section -->
+    <section class="login">
+        <h1>Login</h1>
+        <hr>
 
-<!-- Footer -->
-<footer>
-    Made with ❤️ by <u>Divya</u>
-</footer>
+        <form id="loginForm">
+            <label>Email address</label>
+            <input type="email" id="email" placeholder="name@example.com">
 
-<script src="./login.js"></script>
-<script src="./navbar.js"></script>
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password">
+
+            <p class="register-text">
+                New Here? <a href="./register.html">Register</a>
+            </p>
+
+            <button type="submit">Login</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        Made with ❤️ by <u>Divya</u>
+    </footer>
+
+    <script src="./javascript.js"></script>
+
 </body>
+
 </html>

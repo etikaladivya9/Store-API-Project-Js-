@@ -103,7 +103,7 @@ function addToCart(id) {
     localStorage.setItem("cart", JSON.stringify(cart));
 
     updateCartCount();
-    alert("Product added to cart ✅");
+    // alert("Product added to cart ✅");
 }
 
 // Details
@@ -111,7 +111,7 @@ function showDetails(id) {
     const p = allProducts.find(p => p.id === id);
     if (!p) return;
 
-    alert(
-        `${p.title}\n\nPrice: $${p.price}\n\n${p.description}`
-    );
+    // alert(
+    //     `${p.title}\n\nPrice: $${p.price}\n\n${p.description}`
+    // );
 }

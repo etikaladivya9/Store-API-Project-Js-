@@ -1,151 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Register</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    border-bottom: 1px solid #ddd;
-}
-
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
-}
-
-.nav-btns button {
-    margin-left: 8px;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.nav-btns .active {
-    background: #444;
-    color: white;
-}
-
-/* Register Section */
-.register {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.register h1 {
-    font-size: 36px;
-}
-
-.register hr {
-    width: 80%;
-    margin: 20px auto;
-}
-
-/* Form */
-form {
-    max-width: 400px;
-    margin: auto;
-    text-align: left;
-}
-
-label {
-    display: block;
-    margin: 15px 0 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.login-text {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-.login-text a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-form button {
-    display: block;
-    margin: 20px auto;
-    padding: 8px 25px;
-    border: none;
-    background: #777;
-    color: white;
-    border-radius: 6px;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css.css">
 </head>
 
 <body>
 
-<!-- Navbar -->
-<header class="navbar">
-    <h3>Ecommerce</h3>
+    <!-- Navbar -->
+    <header class="header">
+        <h3>Ecommerce</h3>
 
-    <nav>
-        <a href="./Home.html">Home</a>
-        <a href="./products.html">Products</a>
-        <a href="./About.html">About</a>
-        <a href="./Contact Us.html">Contact</a>
-    </nav>
+        <div class="nav1">
+            <nav>
 
-    <div class="nav-btns">
-        <button onclick="goLogin()">
-            <i class="fa-solid fa-right-to-bracket"></i> Login
-        </button>
+                <a href="./Home.html">Home</a>
+                <a href="./products.html">Products</a>
+                <a href="./About.html">About</a>
+                <a href="./Contact Us.html">Contact</a>
 
-        <button class="active" onclick="goRegister()">
-            <i class="fa-solid fa-user-plus"></i> Register
-        </button>
 
-        <button onclick="goCart()">
-            <i class="fa-solid fa-cart-shopping"></i>
-            Cart (<span id="cart-count">0</span>)
-        </button>
-    </div>
-</header>
+            </nav>
+        </div>
 
-<!-- Register Section -->
-<section class="register">
-    <h1>Register</h1>
-    <hr>
 
-    <form id="registerForm">
-        <label>Full Name</label>
-        <input type="text" id="name" placeholder="Enter Your Name">
+        <div class="buts">
+            <button class="a" onclick="goLogin()">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </button>
 
-        <label>Email address</label>
-        <input type="email" id="email" placeholder="name@example.com">
+            <button class="a" onclick="goRegister()">
+                <i class="fa-solid fa-user-plus"></i>Register
+            </button>
 
-        <label>Password</label>
-        <input type="password" id="password" placeholder="Password">
+            <button class="a" onclick="goCart()">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Cart (<span id="cart-count">0</span>)
+            </button>
+        </div>
+    </header>
 
-        <p class="login-text">
-            Already has an account? <a href="./login.html">Login</a>
-        </p>
+    <!-- Register Section -->
+    <section class="register">
+        <h1>Register</h1>
+        <hr>
 
-        <button type="submit">Register</button>
-    </form>
-</section>
+        <form id="registerForm">
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter Your Name">
 
-<script src="./register.js"></script>
-<script src="./navbar.js"></script>
+            <label>Email address</label>
+            <input type="email" id="email" placeholder="name@example.com">
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password">
+
+            <p class="login-text">
+                Already has an account? <a href="./login.html">Login</a>
+            </p>
+
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <script src="./javascript.js"></script>
+
 </body>
+
 </html>
